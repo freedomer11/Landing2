@@ -79,10 +79,12 @@ ul, li {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F5F7FF;
-  padding: 1rem;
+  padding: 1.5rem;
   color: #272323;
   font-size: 0.875rem;
   font-weight: 500;
+  font-family: opensans, sans-serif;
+  letter-spacing: 0.1rem;
 }
 .header__container .header_menu {
   display: -webkit-box;
@@ -94,7 +96,7 @@ ul, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 .header__container .header_serch {
   display: -webkit-box;
