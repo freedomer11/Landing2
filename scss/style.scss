@@ -7,13 +7,13 @@
   box-sizing: border-box; // Очень важно для предсказуемого макета!
 }
 img {
-    margin: 0;
+    //margin: 0;
     display: block;        /* Робить зображення блоковим, усуваючи пробіл під ними */
-    max-width: 100%;       /* Гарантує, що зображення не виходять за межі батька */
-    height: auto;          /* Зберігає співвідношення сторін при зміні ширини */
-    vertical-align: middle; /* Додатково, хоча display: block вже вирішує проблему базової лінії */
-    object-fit: cover;     /* Якщо зображення в контейнері з фіксованими розмірами, заповнює його, обрізаючи надлишки */
-    object-position: center; /* Центрує зображення, якщо воно обрізається */
+    //max-width: 100%;       /* Гарантує, що зображення не виходять за межі батька */
+    //height: auto;          /* Зберігає співвідношення сторін при зміні ширини */
+    //vertical-align: middle; /* Додатково, хоча display: block вже вирішує проблему базової лінії */
+    // object-fit: cover;     /* Якщо зображення в контейнері з фіксованими розмірами, заповнює його, обрізаючи надлишки */
+    //object-position: center; /* Центрує зображення, якщо воно обрізається */
     font-family: 'object-fit: cover;';
 }
 html, body {
@@ -71,7 +71,7 @@ $background-secondary: #FFFFFF;
     .header-logo {}
     .header_menu {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         gap: 2rem;
         .menu_item {}
@@ -135,7 +135,7 @@ $background-secondary: #FFFFFF;
     flex-direction: column;
     .baner__container {
         display: flex;
-        padding-top: 2rem 0rem 0rem 0rem;
+        //padding-top: 2rem 0rem 0rem 0rem;
         justify-content: center;
         background-color: $background-basic;
         width: 100%;
@@ -207,5 +207,49 @@ $background-secondary: #FFFFFF;
             .baner-img {}
         }
     }
+    .guide__container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem 2.2rem;
+        background-color: $background-secondary;
+        .our-partners {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items:  center;
+            .our-logo {
+               
+            }
+        }
+    }
 }
 .footer__container {}
+
+            // justify-content: space-between;
+            // align-self: center;
+            // .our-logo {
+            //     width: 9.53rem; 
+            //     height: 4.34rem;
+            // }
+            // .our-logo2 {
+            //     width: 7.87rem;
+            //     height: 6.66rem;
+            // }
+            // .our-logo3 {
+            //     width: 3.58rem; 
+            //     height: 4.17rem;
+            // }
+            // .our-logo4 {
+            //     width: 7.47rem; 
+            //     height: 6.66rem;
+            // }
+            // .our-logo5 {
+            //     width: 6.89rem; 
+            //     height: 4.48rem;
+            // }
+            // .our-logo6 {
+            //     width: 6.57rem; 
+            //     height: 6.52rem;;
+            // }
