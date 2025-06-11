@@ -312,6 +312,7 @@ $background-secondary: #FFFFFF;
 
         .guide__text-photo-section {
             display: flex;
+            justify-content: center;
 
             .guide__text-block {
                 .how-it-work {
@@ -344,11 +345,12 @@ $background-secondary: #FFFFFF;
                             align-items: center;
                             padding: 15px 20px;
                             cursor: pointer;
+                            font-family: Opensans, sans-serif;
                             font-weight: bold;
                             font-size: 1.1em;
                             background-color: #F5F7FF;
                             position: relative;
-
+                            margin-top: 1.5rem;
                             &::-webkit-details-marker {
                                 display: none;
                             }
@@ -377,7 +379,7 @@ $background-secondary: #FFFFFF;
                                 /* Задаємо розмір SVG */
                                 height: 24px;
                                 /*Задаємо розмір SVG */
-                                color: #888;
+                                color: #4238AF;
                                 /* Колір SVG (через stroke="currentColor") */
                                 transition: transform 0.3s ease-in-out;
                             }
