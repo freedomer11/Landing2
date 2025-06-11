@@ -309,7 +309,10 @@ $background-secondary: #FFFFFF;
             justify-content: space-between;
             align-items: center;
         }
+
         .guide__text-photo-section {
+            display: flex;
+
             .guide__text-block {
                 .how-it-work {
                     font-family: Oswald, sans-serif;
@@ -319,7 +322,114 @@ $background-secondary: #FFFFFF;
                     color: #FF5C00;
                     margin-bottom: 0.05rem;
                 }
+
+                .collapsible {
+                    padding-right: 1rem;
+                    width: 30.5rem;
+                    margin: 20px auto;
+                    font-family: sans-serif;
+
+                    .collapsible-block {
+                        background-color: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                        /* Легка тінь */
+                        margin-bottom: 15px;
+                        color: #333;
+                        overflow: hidden;
+                        list-style: none;
+
+                        .collapsible-header {
+                            display: flex;
+                            align-items: center;
+                            padding: 15px 20px;
+                            cursor: pointer;
+                            font-weight: bold;
+                            font-size: 1.1em;
+                            background-color: #F5F7FF;
+                            position: relative;
+
+                            &::-webkit-details-marker {
+                                display: none;
+                            }
+
+                            &::marker {
+                                display: none;
+                            }
+
+                            .step-number {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 25%;
+                                color: #fff;
+                                font-size: 0.9em;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            }
+
+                            .icon-chevron {
+                                margin-left: auto;
+                                /* Притискає SVG до правого краю */
+                                width: 24px;
+                                /* Задаємо розмір SVG */
+                                height: 24px;
+                                /*Задаємо розмір SVG */
+                                color: #888;
+                                /* Колір SVG (через stroke="currentColor") */
+                                transition: transform 0.3s ease-in-out;
+                            }
+                        }
+
+                        &[open] .collapsible-header .icon-chevron {
+                            transform: rotate(90deg);
+                        }
+
+                        .collapsible-content {
+                            padding: 10px 20px 15px;
+                            background-color: #F5F7FF;
+                            color: #666;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }
+
+            .video-wrapper {
+                margin-top: 4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .video-frame {
+                    position: relative;
+                    width: 100%;
+                    // max-width: 500px;
+                    border-radius: 1rem;
+                    overflow: hidden;
+
+                    iframe {
+                        width: 39.6rem;
+                        height: 27rem;
+                        border-radius: 1rem;
+                        border: none;
+                    }
+                    .play-overlay {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 48px;
+                        background: rgba(255, 255, 255, 0.7);
+                        padding: 10px 15px;
+                        border-radius: 50%;
+                        pointer-events: none;
+                    }
+                }
             }
         }
+
     }
 }
