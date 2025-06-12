@@ -12,23 +12,17 @@
 }
 
 img {
-    //margin: 0;
     display: block;
-    /* Робить зображення блоковим, усуваючи пробіл під ними */
-    //max-width: 100%;       /* Гарантує, що зображення не виходять за межі батька */
-    //height: auto;          /* Зберігає співвідношення сторін при зміні ширини */
-    //vertical-align: middle; /* Додатково, хоча display: block вже вирішує проблему базової лінії */
-    // object-fit: cover;     /* Якщо зображення в контейнері з фіксованими розмірами, заповнює його, обрізаючи надлишки */
-    //object-position: center; /* Центрує зображення, якщо воно обрізається */
     font-family: 'object-fit: cover;';
 }
 
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
     width: 100%; // Или 100vw, но 100% безопаснее для избежания гор. прокрутки
     overflow-x: hidden; // Предотвращает горизонтальную прокрутку
-    // ... другие базовые стили
 }
 
 body {
@@ -74,7 +68,11 @@ $background-secondary: #FFFFFF;
     margin: 0 auto;
     padding: 0rem;
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
 .header__container {
     display: flex;
     width: 100vw;
@@ -202,6 +200,19 @@ $background-secondary: #FFFFFF;
     margin-bottom: 2rem;
 }
 
+.text-center {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.055rem;
+    transition: background-color 0.3s ease;
+    color: #A8A8A8;
+    font-family: Opensans, sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    width: 55%;
+}
+
 .title {
     color: #353434;
     font-family: Oswald, sans-serif;
@@ -211,11 +222,22 @@ $background-secondary: #FFFFFF;
     line-height: 3.125rem;
 }
 
+.title-footer {
+    color: #353434;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    line-height: 3.125rem;
+}
+
 .main__container {
     padding: 0;
     display: flex;
     flex-direction: column;
-
+    flex: 1 0 auto;
+    overflow-y: auto;
+    min-height: 100vh; // Забезпечує, що контейнер займає всю висоту вікна
     .baner__container {
         display: flex;
         //padding-top: 2rem 0rem 0rem 0rem;
@@ -351,6 +373,7 @@ $background-secondary: #FFFFFF;
                             background-color: #F5F7FF;
                             position: relative;
                             margin-top: 1.5rem;
+
                             &::-webkit-details-marker {
                                 display: none;
                             }
@@ -359,14 +382,43 @@ $background-secondary: #FFFFFF;
                                 display: none;
                             }
 
-                            .step-number {
+                            .step-number1 {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 width: 30px;
                                 height: 30px;
                                 border-radius: 25%;
-                                color: #fff;
+                                color: #9444C9;
+                                background-color: #F3E0FF;
+                                font-size: 0.9em;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            }
+
+                            .step-number2 {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 25%;
+                                color: #626FFF;
+                                background-color: #E7E9FE;
+                                font-size: 0.9em;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                            }
+
+                            .step-number3 {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 25%;
+                                color: #FF5C00;
+                                background-color: #FFDECC;
                                 font-size: 0.9em;
                                 margin-right: 15px;
                                 flex-shrink: 0;
@@ -418,6 +470,7 @@ $background-secondary: #FFFFFF;
                         border-radius: 1rem;
                         border: none;
                     }
+
                     .play-overlay {
                         position: absolute;
                         top: 50%;
@@ -433,5 +486,103 @@ $background-secondary: #FFFFFF;
             }
         }
 
+    }
+
+    .why-chose-us {
+        background-color: $background-secondary;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &_title-block {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        &_card-block {
+            display: flex;
+            justify-content: center;
+            padding: 0 2.2rem;
+
+            .card {
+                background-color: #fff;
+                margin: 1rem;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-radius: 1.5rem;
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+                transition: box-shadow 0.3s ease;
+
+                &.central {
+                    background-color: #f7f6ff; // м’який фіолетовий фон
+                    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1); // глибша тінь
+                }
+            }
+
+            .card-title {
+                font-family: 'Open Sans';
+                font-weight: 600;
+                font-size: 1.25rem;
+                letter-spacing: 0.05rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+.footer__container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    flex-shrink: 0;
+
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 2.2rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+        background-color: #DBE2FF;
+
+        .nav-column {
+            display: flex;
+            flex-direction: column;
+
+            .nav-column-utem {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                letter-spacing: 0.05rem;
+                color: #717171;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .bottom-footer {
+        padding: 0.5rem 2.2rem;
+        background-color: #DBE2FF;
+        .bottom-footer-border {
+            border-top: 0.2rem solid #625BAE;
+            padding-top: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            // justify-content: space-between;
+            .bottom-footer-nav {
+                display: flex;
+                align-items: center;
+                .bottom-footer-list {
+                    display: flex;
+                    gap: 2.5rem;
+                }
+            }
+            .bottom-footer-sociallink {
+                width: 15rem;
+                justify-content: space-between;
+                display: flex;
+            }
+        }
     }
 }
