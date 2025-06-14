@@ -68,11 +68,13 @@ $background-secondary: #FFFFFF;
     margin: 0 auto;
     padding: 0rem;
 }
+
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 .header__container {
     display: flex;
     width: 100vw;
@@ -238,6 +240,7 @@ $background-secondary: #FFFFFF;
     flex: 1 0 auto;
     overflow-y: auto;
     min-height: 100vh; // Забезпечує, що контейнер займає всю висоту вікна
+
     .baner__container {
         display: flex;
         //padding-top: 2rem 0rem 0rem 0rem;
@@ -505,6 +508,7 @@ $background-secondary: #FFFFFF;
             display: flex;
             justify-content: center;
             padding: 0 2.2rem;
+            margin-bottom: 2rem;
 
             .card {
                 background-color: #fff;
@@ -527,6 +531,171 @@ $background-secondary: #FFFFFF;
                 font-size: 1.25rem;
                 letter-spacing: 0.05rem;
                 margin: 1rem 0;
+            }
+        }
+    }
+
+    .featured-jobs__container {
+        background-color: $background-secondary;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .featured-jobs_title-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .featured-jobs-card_block {
+            display: flex;
+            margin-bottom: 1.5rem;
+
+            .fj-card {
+                background-color: #fff;
+                margin: 1rem;
+                padding: 1.5rem;
+                border-radius: 1.5rem;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+                transition: box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 21.7rem;
+                height: 26.5rem;
+
+                .seting {
+                    width: 95%;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+
+                .card-avatar-block {
+                    margin-bottom: 1rem;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 0.1rem solid #7B42F6;
+                    margin-top: 1.5rem;
+                    box-shadow: 0 0 0.312rem rgba(0, 0, 0, 0.5);
+                }
+
+                .fj-title {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    letter-spacing: 0.03rem;
+                    transition: background-color 0.3s ease;
+                    color: #323232;
+                    font-family: Opensans, sans-serif;
+                }
+
+                .team {
+                    color: #4238AF;
+                    font-size: 0.9rem;
+                    margin-bottom: 2.5rem;
+                }
+
+                .fj-card-buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-top: 2.5rem;
+                    .svg {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
+                    .fj-card-button {
+                        background-color: #544CAC;
+                        color: #FFFFFF;
+                        border-radius: 2rem;
+                        width: 7rem;
+                        height: 2.7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .praice-block {
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 14rem;
+                    letter-spacing: 0.055rem;
+                    margin-bottom: 0.5rem;
+                    .praice {
+                        display: flex;
+                    }
+                    .praice-time {
+                        color: #898989;
+                        font-weight: 0.875rem;
+                    }
+                }
+                .location-block {
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 14rem;
+                    .location {
+                        display: flex;
+                    }
+                    .viev-loco {
+                        color: #898989;
+                        font-weight: 0.875rem;
+                    }
+                }
+            }
+            .fj-card:hover {
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+                /* Збільшуємо тінь при наведенні */
+            }
+        }
+        .arrow-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            .arrow-left{
+                box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+                border-radius: 1rem;
+                width: 4rem;
+                height: 4rem;
+                .arrow-left-svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            .arrow-left:hover{
+                box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+                
+            }
+            .arrow-right{
+                box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+                border-radius: 1rem;
+                width: 4rem;
+                height: 4rem;
+                .arrow-right-svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            .arrow-right:hover{
+                box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+                fill: #EF6010;
             }
         }
     }
@@ -564,20 +733,24 @@ $background-secondary: #FFFFFF;
     .bottom-footer {
         padding: 0.5rem 2.2rem;
         background-color: #DBE2FF;
+
         .bottom-footer-border {
             border-top: 0.2rem solid #625BAE;
             padding-top: 0.5rem;
             display: flex;
             justify-content: space-between;
+
             // justify-content: space-between;
             .bottom-footer-nav {
                 display: flex;
                 align-items: center;
+
                 .bottom-footer-list {
                     display: flex;
                     gap: 2.5rem;
                 }
             }
+
             .bottom-footer-sociallink {
                 width: 15rem;
                 justify-content: space-between;
