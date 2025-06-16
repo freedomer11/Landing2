@@ -1202,6 +1202,7 @@ li {
   background-color: #FFFFFF;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding-top: 5rem;
 }
 .footer__container .footer-nav {
   display: -webkit-box;
