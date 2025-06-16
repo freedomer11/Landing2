@@ -1,63 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
-@import url(https://fonts.googleapis.com/css?family=Prompt:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box; // Очень важно для предсказуемого макета!
-}
-
-img {
-    display: block;
-    font-family: 'object-fit: cover;';
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%; // Или 100vw, но 100% безопаснее для избежания гор. прокрутки
-    overflow-x: hidden; // Предотвращает горизонтальную прокрутку
-}
-
-body {
-    font-size: 16px; // Базовый размер шрифта
-    display: flex;
-    font-family: 'Open Sans', sans-serif; // Применение шрифта
-    background-color: #f0f0f0; // Цвет фона, можно изменить
-    line-height: 1.6; // Улучшает читаемость текста
-    justify-content: center; // Центрирование содержимого по горизонтали
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
-    font-weight: 700; // Жирный шрифт для заголовков
-}
-
-p {
-    margin: 0 0 1em; // Отступы снизу для абзацев
-}
-
-a {
-    text-decoration: none; // Убираем подчеркивание
-    color: inherit;
-}
-
-ul,
-li {
-    list-style: none; // Убираем маркеры списка
-}
+@import "nullstyle.scss";
 
 $background-basic: #F5F7FF;
 $background-secondary: #FFFFFF;
@@ -582,7 +523,7 @@ $background-secondary: #FFFFFF;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 0.1rem solid #7B42F6;
+                    border: 0.2rem solid #d4773e;
                     margin-top: 1.5rem;
                     box-shadow: 0 0 0.312rem rgba(0, 0, 0, 0.5);
                 }
@@ -607,6 +548,7 @@ $background-secondary: #FFFFFF;
                     align-items: center;
                     gap: 2rem;
                     margin-top: 2.5rem;
+
                     .svg {
                         width: 3rem;
                         height: 3rem;
@@ -623,6 +565,7 @@ $background-secondary: #FFFFFF;
                         justify-content: center;
                     }
                 }
+
                 .praice-block {
                     display: flex;
                     align-items: center;
@@ -634,14 +577,17 @@ $background-secondary: #FFFFFF;
                     width: 14rem;
                     letter-spacing: 0.055rem;
                     margin-bottom: 0.5rem;
+
                     .praice {
                         display: flex;
                     }
+
                     .praice-time {
                         color: #898989;
                         font-weight: 0.875rem;
                     }
                 }
+
                 .location-block {
                     display: flex;
                     align-items: center;
@@ -651,51 +597,380 @@ $background-secondary: #FFFFFF;
                     display: flex;
                     justify-content: space-between;
                     width: 14rem;
+
                     .location {
                         display: flex;
                     }
+
                     .viev-loco {
                         color: #898989;
                         font-weight: 0.875rem;
                     }
                 }
             }
+
             .fj-card:hover {
                 box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
                 /* Збільшуємо тінь при наведенні */
             }
         }
+
         .arrow-buttons {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
-            .arrow-left{
+            align-items: center;
+
+            .arrow-left {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 border-radius: 1rem;
                 width: 4rem;
                 height: 4rem;
-                .arrow-left-svg{
+
+                .arrow-left-svg {
                     width: 4rem;
                     height: 4rem;
                 }
             }
-            .arrow-left:hover{
+
+            .arrow-left:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
-                
+
             }
-            .arrow-right{
+
+            .arrow-right {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 border-radius: 1rem;
                 width: 4rem;
                 height: 4rem;
-                .arrow-right-svg{
+
+                .arrow-right-svg {
                     width: 4rem;
                     height: 4rem;
                 }
             }
-            .arrow-right:hover{
+
+            .arrow-right:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
                 fill: #EF6010;
+            }
+
+            .fj-viewmore-button {
+                box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+                margin-left: 2rem;
+                background-color: #544CAC;
+                color: #FFFFFF;
+                border-radius: 2rem;
+                width: 8rem;
+                height: 2.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .fj-viewmore-button:hover {
+                box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+
+    .whatour__container {
+        width: 100vw;
+        padding: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        background-color: $background-secondary;
+
+        .whatour_title-block {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .whatour_img-text-blo {
+            display: flex;
+
+            whatour_img-block {
+                width: 21.8rem;
+                height: 21.8rem;
+            }
+
+        }
+
+        .whatour_text-block {
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            .whaour-title {
+                font-family: Opensans, sans-serif;
+                font-weight: 600;
+                font-size: 1.25rem;
+                letter-spacing: 0.05rem;
+                color: #323232;
+            }
+
+            .star-rating-block {
+                justify-content: flex-end;
+                display: flex;
+                padding-right: 2rem;
+
+                .star-rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.312rem;
+                }
+
+                .star {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    color: #FFD700;
+                    flex-shrink: 0;
+
+                    &.filled {
+                        fill: currentColor;
+                        stroke: none;
+                    }
+
+                    &.half-filled {
+                        stroke: none;
+                    }
+
+                    &.empty {
+                        fill: transparent;
+                        stroke: #CCCCCC;
+                        stroke-width: 1.5;
+                    }
+                }
+
+                .rating-value {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    color: #333;
+                    margin-left: 0.312rem;
+                }
+            }
+
+            .whatour-textjustify {
+                font-size: 0.875rem;
+                line-height: 1.6;
+                color: #383838;
+                text-align: justify;
+                margin-bottom: 2rem;
+            }
+
+            .whatour-reviewers_button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .whatour-buttons {
+                    display: flex;
+                    gap: 1rem;
+                    align-content: center;
+
+                    .arrow-left {
+                        box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+                        border-radius: 1rem;
+                        width: 3rem;
+                        height: 3rem;
+
+                        .arrow-left-svg {
+                            width: 3.1rem;
+                            height: 3.1rem;
+                        }
+                    }
+
+                    .arrow-left:hover {
+                        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+
+                    }
+
+                    .arrow-right {
+                        box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+                        border-radius: 1rem;
+                        width: 3rem;
+                        height: 3rem;
+
+                        .arrow-right-svg {
+                            width: 3.1rem;
+                            height: 3.1rem;
+                        }
+                    }
+
+                    .arrow-right:hover {
+                        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+                        fill: #EF6010;
+                    }
+                }
+
+                .whatour-reviewers {
+                    display: flex;
+                    align-items: center;
+
+                    .whatour-avatar-block {
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 0.2rem solid #ff741e;
+                        box-shadow: 0 0 0.312rem rgba(0, 0, 0, 0.5);
+
+                        &:not(:first-child) {
+                            // Застосовуємо тільки до всіх елементів, крім першого
+                            margin-left: -1.5rem;
+                        }
+
+                        .avatar {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover; // Щоб зображення заповнювало коло без спотворень
+                            display: block; // Щоб уникнути зайвого простору під зображенням
+                        }
+                    }
+
+                    .whatour-avatar-count {
+                        background-color: #A9A3E9;
+                        color: #4238AF;
+                        margin-left: -1.5rem;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 0 0.312rem rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+
+        .whatour_count {
+            display: flex;
+            border-radius: 2rem;
+            background-color: #CED5F4;
+            align-items: center;
+            justify-content: space-around;
+            margin: 8rem 0;
+            padding: 6rem 4rem;
+
+            .whatour-counts-name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .count {
+                    font-family: 'Oswald';
+                    font-size: 2.5rem;
+                    color: #584EC6;
+                    letter-spacing: 0.01rem;
+                    font-weight: 400;
+                }
+
+                .name {
+                    font-family: 'open sans';
+                    font-weight: 400;
+                    font-size: 1rem;
+                    letter-spacing: 0.05rem;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .pricing__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background-color: $background-secondary;
+
+        .pricing_card-block {
+            display: flex;
+            justify-content: space-around;
+            background-color: $background-secondary;
+            gap: 2rem;
+            padding: 3rem;
+
+            .pricing-card {
+                padding: 3.5rem;
+                gap: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 2rem;
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+                transition: box-shadow 0.3s ease;
+
+                &.central {
+                    background-color: #F9FAFF; // м’який фіолетовий фон
+                    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1); // глибша тінь
+                }
+
+                .pricing-card-title {
+                    font-family: 'Open Sans';
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                    letter-spacing: 0.05rem;
+                    color: #4238AF;
+                }
+
+                .price {
+                    font-family: 'Oswald';
+                    font-weight: 400;
+                    font-size: 2.8rem;
+                    letter-spacing: 0.16rem;
+                    color: #353434;
+
+                }
+
+                .pricing-propous {
+                    gap: 1rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    .propous-item {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        img {
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                }
+
+                .pricing-card-button {
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 1rem;
+                    letter-spacing: 0.05rem;
+                    background-color: #BDBBD9;
+                    color: #FFFFFF;
+                    border-radius: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.7rem 2rem;
+                    &.central {
+                        background-color: #544CAC;
+                    }
+                }
+                &:hover {
+                    .pricing-card-button{
+                        background-color: #544CAC;
+                    }
+                }
+
             }
         }
     }

@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Prompt:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; // Очень важно для предсказуемого макета!
+}
+
+img {
+    display: block;
+    font-family: 'object-fit: cover;';
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%; // Или 100vw, но 100% безопаснее для избежания гор. прокрутки
+    overflow-x: hidden; // Предотвращает горизонтальную прокрутку
+}
+
+body {
+    font-size: 16px; // Базовый размер шрифта
+    display: flex;
+    font-family: 'Open Sans', sans-serif; // Применение шрифта
+    background-color: #f0f0f0; // Цвет фона, можно изменить
+    line-height: 1.6; // Улучшает читаемость текста
+    justify-content: center; // Центрирование содержимого по горизонтали
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700; // Жирный шрифт для заголовков
+}
+
+p {
+    margin: 0 0 1em; // Отступы снизу для абзацев
+}
+
+a {
+    text-decoration: none; // Убираем подчеркивание
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none; // Убираем маркеры списка
+}
