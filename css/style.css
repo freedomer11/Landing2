@@ -113,6 +113,9 @@ li {
           align-items: center;
   gap: 2rem;
 }
+.header__container .header_menu .menu_item:hover {
+  font-size: 1rem;
+}
 .header__container .header_serch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,6 +211,13 @@ li {
 .header__container .header_login-singup .header_login {
   color: blue;
 }
+.header__container .header_login-singup .header_login:hover {
+  font-size: 1rem;
+}
+.header__container .header_login-singup .header_singup:hover {
+  font-size: 1rem;
+}
+
 .text {
   font-size: 0.875rem;
   font-weight: 400;
@@ -1273,6 +1283,10 @@ li {
   color: #717171;
   margin-bottom: 0.5rem;
 }
+.footer__container .footer-nav .nav-column .nav-column-utem:hover {
+  font-weight: 600;
+  color: #000000;
+}
 .footer__container .bottom-footer {
   padding: 0.5rem 2.2rem;
   background-color: #DBE2FF;
@@ -1300,6 +1314,10 @@ li {
   display: -ms-flexbox;
   display: flex;
   gap: 2.5rem;
+}
+.footer__container .bottom-footer .bottom-footer-border .bottom-footer-nav .bottom-footer-list .item:hover {
+  font-weight: 600;
+  color: #000000;
 }
 .footer__container .bottom-footer .bottom-footer-border .bottom-footer-sociallink {
   width: 15rem;

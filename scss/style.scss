@@ -37,7 +37,9 @@ $background-secondary: #FFFFFF;
         align-items: center;
         gap: 2rem;
 
-        .menu_item {}
+        .menu_item:hover {
+            font-size: 1rem;
+        }
     }
 
     .header_serch {
@@ -126,9 +128,15 @@ $background-secondary: #FFFFFF;
     .header_login-singup {
         .header_login {
             color: blue;
+
+            &:hover {
+                font-size: 1rem;
+            }
         }
 
-        .header_singup {}
+        .header_singup:hover {
+            font-size: 1rem;
+        }
     }
 
 }
@@ -961,16 +969,17 @@ $background-secondary: #FFFFFF;
                     align-items: center;
                     justify-content: center;
                     padding: 0.7rem 2rem;
+
                     &.central {
                         background-color: #544CAC;
                     }
                 }
+
                 &:hover {
-                    .pricing-card-button{
+                    .pricing-card-button {
                         background-color: #544CAC;
                     }
                 }
-
             }
         }
     }
@@ -1001,6 +1010,10 @@ $background-secondary: #FFFFFF;
                 letter-spacing: 0.05rem;
                 color: #717171;
                 margin-bottom: 0.5rem;
+                &:hover {
+                    font-weight: 600;
+                    color: #000000;
+                }
             }
         }
     }
@@ -1023,6 +1036,11 @@ $background-secondary: #FFFFFF;
                 .bottom-footer-list {
                     display: flex;
                     gap: 2.5rem;
+                    .item:hover {
+                        font-weight: 600;
+                        color: #000000;
+                    }
+                    
                 }
             }
 
