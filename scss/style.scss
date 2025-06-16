@@ -7,13 +7,11 @@
     margin: 0 auto;
     padding: 0rem;
 }
-
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 .header__container {
     display: flex;
     width: 100vw;
@@ -26,119 +24,73 @@
     font-weight: 500;
     font-family: opensans, sans-serif;
     letter-spacing: 0.1rem;
-
     .header-logo {}
-
     .header_menu {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         gap: 2rem;
-
         .menu_item:hover {
             font-size: 1rem;
         }
     }
-
     .header_serch {
         display: flex;
-        /* Використовуємо Flexbox для розташування елементів */
         align-items: center;
-        /* Вирівнюємо елементи по центру по вертикалі */
         width: 100%;
-        /* Займає всю доступну ширину */
         max-width: 19rem;
-        /* Обмежуємо максимальну ширину поля пошуку */
         height: 2.5rem;
-        /* Висота всього поля пошуку */
         border-radius: 1.56rem;
-        /* Заокруглюємо кути контейнера */
         background-color: #fff;
-        /* Білий фон */
         box-shadow: 0 0.125rem 0.312rem rgba(0, 0, 0, 0.1);
-        /* Легка тінь */
         overflow: hidden;
-
         .search-input {
             flex-grow: 1;
-            /* Займає всю доступну ширину всередині контейнера */
             height: 100%;
-            /* Займає всю висоту контейнера */
             padding: 0 1.25rem;
-            /* Внутрішній відступ зліва та справа */
             border: none;
-            /* Прибираємо стандартний обвідник */
             outline: none;
-            /* Прибираємо outline при фокусі */
             font-size: 1rem;
-            /* Розмір шрифту */
             color: #333;
-            /* Колір тексту */
             background-color: transparent;
         }
-
         .search-button {
             display: flex;
-            /* Використовуємо Flexbox для центрівки іконки */
             justify-content: center;
-            /* Центруємо іконку по горизонталі */
             align-items: center;
-            /* Центруємо іконку по вертикалі */
             width: 2.1rem;
-            /* Ширина кнопки */
             height: 2.1rem;
-            /* Висота кнопки */
             margin-right: 0.312rem;
-            /* Відступ справа від кнопки */
             border: 0.125rem solid #e0e0f0;
-            /* Фіолетовий обідок навколо іконки */
             border-radius: 50%;
-            /* Робимо кнопку круглою */
             background-color: $background-basic;
-            /* Прозорий фон кнопки */
             cursor: pointer;
-            /* Змінюємо курсор на вказівник */
             transition: all 0.3s ease;
-            /* Плавний перехід для ефектів */
             padding: 0;
-            /* Прибираємо внутрішні відступи кнопки */
             outline: none;
-            /* Прибираємо outline при фокусі */
         }
-
         .search-button:hover {
             border-color: #fe461c;
-            /* Змінюємо колір обідка при наведенні */
         }
-
         .search-icon {
             width: 1.25rem;
-            /* Ширина іконки */
             height: 1.25rem;
-            /* Висота іконки */
             color: #fe461c;
-            /* Помаранчевий колір іконки */
             stroke-width: 0.156rem;
-            /* Товщина лінії іконки (якщо це SVG) */
         }
     }
-
     .header_login-singup {
         .header_login {
             color: blue;
-
             &:hover {
                 font-size: 1rem;
             }
         }
-
         .header_singup:hover {
             font-size: 1rem;
         }
     }
-
 }
-
 .text {
     font-size: 0.875rem;
     font-weight: 400;
@@ -148,7 +100,6 @@
     font-family: Opensans, sans-serif;
     margin-bottom: 2rem;
 }
-
 .text-center {
     font-size: 0.875rem;
     font-weight: 400;
@@ -161,7 +112,6 @@
     margin-top: 1rem;
     width: 55%;
 }
-
 .title {
     color: #353434;
     font-family: Oswald, sans-serif;
@@ -170,7 +120,6 @@
     letter-spacing: 0.05rem;
     line-height: 3.125rem;
 }
-
 .title-footer {
     color: $blacktext;
     font-family: Oswald, sans-serif;
@@ -179,25 +128,20 @@
     letter-spacing: 0.05rem;
     line-height: 3.125rem;
 }
-
 .main__container {
     padding: 0;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
     overflow-y: auto;
-    min-height: 100vh; // Забезпечує, що контейнер займає всю висоту вікна
-
+    min-height: 100vh;
     .baner__container {
         display: flex;
-        //padding-top: 2rem 0rem 0rem 0rem;
         justify-content: center;
         background-color: $background-basic;
         width: 100%;
-
         .baner_text-block {
             align-content: center;
-
             .baner-title {
                 letter-spacing: 0.05rem;
                 font-family: prompt, sans-serif;
@@ -206,16 +150,13 @@
                 line-height: 3.438rem;
                 color: $blacktext;
                 margin-bottom: 0.625rem;
-
                 .baner-title-color {
                     color: $orangecolor;
                 }
             }
-
             .baner_block-buttons {
                 display: flex;
                 gap: 3rem;
-
                 .dis-now-button {
                     display: inline-block;
                     padding: 0.625rem 1.25rem;
@@ -228,7 +169,6 @@
                     letter-spacing: 0.1rem;
                     transition: background-color 0.3s ease; // Плавный переход цвета фона
                 }
-
                 .watch-demo-button {
                     justify-content: start;
                     align-items: center;
@@ -243,7 +183,6 @@
                     font-size: 1rem;
                     font-weight: 400;
                     letter-spacing: 0.1rem;
-
                     .demo-cirkle {
                         width: 2.99rem;
                         height: 2.99rem;
@@ -252,7 +191,6 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
                         .play {
                             width: 1rem;
                             height: 1rem;
@@ -261,12 +199,10 @@
                 }
             }
         }
-
         .baner_img-block {
             .baner-img {}
         }
     }
-
     .guide__container {
         width: 100vw;
         display: flex;
@@ -274,18 +210,15 @@
         flex-direction: column;
         padding: 1rem 2.2rem;
         background-color: $background-secondary;
-
         .our-partners {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .guide__text-photo-section {
             display: flex;
             justify-content: center;
-
             .guide__text-block {
                 .how-it-work {
                     font-family: Oswald, sans-serif;
@@ -295,23 +228,19 @@
                     color: $orangecolor;
                     margin-bottom: 0.05rem;
                 }
-
                 .collapsible {
                     padding-right: 1rem;
                     width: 30.5rem;
                     margin: 20px auto;
                     font-family: sans-serif;
-
                     .collapsible-block {
                         background-color: $background-secondary;
                         border-radius: 8px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                        /* Легка тінь */
                         margin-bottom: 15px;
                         color: $blacktext;
                         overflow: hidden;
                         list-style: none;
-
                         .collapsible-header {
                             display: flex;
                             align-items: center;
@@ -323,15 +252,12 @@
                             background-color: $background-basic;
                             position: relative;
                             margin-top: 1.5rem;
-
                             &::-webkit-details-marker {
                                 display: none;
                             }
-
                             &::marker {
                                 display: none;
                             }
-
                             .step-number1 {
                                 display: flex;
                                 justify-content: center;
@@ -345,7 +271,6 @@
                                 margin-right: 15px;
                                 flex-shrink: 0;
                             }
-
                             .step-number2 {
                                 display: flex;
                                 justify-content: center;
@@ -359,7 +284,6 @@
                                 margin-right: 15px;
                                 flex-shrink: 0;
                             }
-
                             .step-number3 {
                                 display: flex;
                                 justify-content: center;
@@ -373,24 +297,17 @@
                                 margin-right: 15px;
                                 flex-shrink: 0;
                             }
-
                             .icon-chevron {
                                 margin-left: auto;
-                                /* Притискає SVG до правого краю */
                                 width: 24px;
-                                /* Задаємо розмір SVG */
                                 height: 24px;
-                                /*Задаємо розмір SVG */
                                 color: #4238AF;
-                                /* Колір SVG (через stroke="currentColor") */
                                 transition: transform 0.3s ease-in-out;
                             }
                         }
-
                         &[open] .collapsible-header .icon-chevron {
                             transform: rotate(90deg);
                         }
-
                         .collapsible-content {
                             padding: 10px 20px 15px;
                             background-color: $background-basic;
@@ -400,19 +317,16 @@
                     }
                 }
             }
-
             .video-wrapper {
                 margin-top: 4rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-
                 .video-frame {
                     position: relative;
                     width: 100%;
                     border-radius: 1rem;
                     overflow: hidden;
-
                     iframe {
                         width: 39.6rem;
                         height: 27rem;
@@ -422,28 +336,23 @@
                 }
             }
         }
-
     }
-
     .why-chose-us {
         background-color: $background-secondary;
         display: flex;
         align-items: center;
         flex-direction: column;
-
         &_title-block {
             display: flex;
             flex-direction: column;
             margin-top: 2rem;
             align-items: center;
         }
-
         &_card-block {
             display: flex;
             justify-content: center;
             padding: 0 2.2rem;
             margin-bottom: 2rem;
-
             .card {
                 background-color: $background-secondary;
                 margin: 1rem;
@@ -468,25 +377,21 @@
             }
         }
     }
-
     .featured-jobs__container {
         background-color: $background-secondary;
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .featured-jobs_title-block {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 2rem;
         }
-
         .featured-jobs-card_block {
             display: flex;
             margin-bottom: 1.5rem;
-
             .fj-card {
                 background-color: $background-secondary;
                 margin: 1rem;
@@ -601,53 +506,42 @@
                     }
                 }
             }
-
             .fj-card:hover {
                 box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-                /* Збільшуємо тінь при наведенні */
             }
         }
-
         .arrow-buttons {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
             align-items: center;
-
             .arrow-left {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 border-radius: 1rem;
                 width: 4rem;
                 height: 4rem;
-
                 .arrow-left-svg {
                     width: 4rem;
                     height: 4rem;
                 }
             }
-
             .arrow-left:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
-
             }
-
             .arrow-right {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 border-radius: 1rem;
                 width: 4rem;
                 height: 4rem;
-
                 .arrow-right-svg {
                     width: 4rem;
                     height: 4rem;
                 }
             }
-
             .arrow-right:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
                 fill: $orangecolor;
             }
-
             .fj-viewmore-button {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 margin-left: 2rem;
@@ -660,42 +554,34 @@
                 align-items: center;
                 justify-content: center;
             }
-
             .fj-viewmore-button:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
             }
         }
     }
-
     .whatour__container {
         width: 100vw;
         padding: 2.2rem;
         display: flex;
         flex-direction: column;
         background-color: $background-secondary;
-
         .whatour_title-block {
             margin-top: 3rem;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .whatour_img-text-blo {
             display: flex;
-
             whatour_img-block {
                 width: 21.8rem;
                 height: 21.8rem;
             }
-
         }
-
         .whatour_text-block {
             padding-left: 2rem;
             display: flex;
             flex-direction: column;
-
             .whaour-title {
                 font-family: Opensans, sans-serif;
                 font-weight: 600;
@@ -703,40 +589,33 @@
                 letter-spacing: 0.05rem;
                 color: $blacktext;
             }
-
             .star-rating-block {
                 justify-content: flex-end;
                 display: flex;
                 padding-right: 2rem;
-
                 .star-rating {
                     display: flex;
                     align-items: center;
                     gap: 0.312rem;
                 }
-
                 .star {
                     width: 1.5rem;
                     height: 1.5rem;
                     color: #FFD700;
                     flex-shrink: 0;
-
                     &.filled {
                         fill: currentColor;
                         stroke: none;
                     }
-
                     &.half-filled {
                         stroke: none;
                     }
-
                     &.empty {
                         fill: transparent;
                         stroke: $silvertext;
                         stroke-width: 1.5;
                     }
                 }
-
                 .rating-value {
                     font-size: 1.5em;
                     font-weight: bold;
@@ -744,7 +623,6 @@
                     margin-left: 0.312rem;
                 }
             }
-
             .whatour-textjustify {
                 font-size: 0.875rem;
                 line-height: 1.6;
@@ -752,52 +630,42 @@
                 text-align: justify;
                 margin-bottom: 2rem;
             }
-
             .whatour-reviewers_button {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
                 .whatour-buttons {
                     display: flex;
                     gap: 1rem;
                     align-content: center;
-
                     .arrow-left {
                         box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                         border-radius: 1rem;
                         width: 3rem;
                         height: 3rem;
-
                         .arrow-left-svg {
                             width: 3.1rem;
                             height: 3.1rem;
                         }
                     }
-
                     .arrow-left:hover {
                         box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
-
                     }
-
                     .arrow-right {
                         box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                         border-radius: 1rem;
                         width: 3rem;
                         height: 3rem;
-
                         .arrow-right-svg {
                             width: 3.1rem;
                             height: 3.1rem;
                         }
                     }
-
                     .arrow-right:hover {
                         box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
                         fill: #EF6010;
                     }
                 }
-
                 .whatour-reviewers {
                     display: flex;
                     align-items: center;
@@ -844,7 +712,6 @@
                 }
             }
         }
-
         .whatour_count {
             display: flex;
             border-radius: 2rem;
@@ -853,7 +720,6 @@
             justify-content: space-around;
             margin: 8rem 0;
             padding: 6rem 4rem;
-
             .whatour-counts-name {
                 display: flex;
                 flex-direction: column;
@@ -877,21 +743,18 @@
             }
         }
     }
-
     .pricing__container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100vw;
         background-color: $background-secondary;
-
         .pricing_card-block {
             display: flex;
             justify-content: space-around;
             background-color: $background-secondary;
             gap: 2rem;
             padding: 3rem;
-
             .pricing-card {
                 padding: 3.5rem;
                 gap: 2rem;
@@ -969,25 +832,21 @@
         }
     }
 }
-
 .footer__container {
     width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: $background-secondary;
     flex-shrink: 0;
-
     .footer-nav {
         display: flex;
         justify-content: space-between;
         padding: 2.2rem;
         border-radius: 1.5rem 1.5rem 0 0;
         background-color: $background-basic;
-
         .nav-column {
             display: flex;
             flex-direction: column;
-
             .nav-column-utem {
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 400;
