@@ -1,11 +1,9 @@
-@import "nullstyle.scss";
-
-$background-basic: #F5F7FF;
-$background-secondary: #FFFFFF;
+@import 'nullstyle.scss';
+@import 'variables';
 
 [class*="__container"] {
-    max-width: 75rem;
-    min-width: 20rem;
+    max-width: $maxwidth;
+    min-width: $minwidth;
     margin: 0 auto;
     padding: 0rem;
 }
@@ -23,7 +21,7 @@ $background-secondary: #FFFFFF;
     align-items: center;
     background-color: $background-basic;
     padding: 1.5rem;
-    color: #272323;
+    color: $blacktext;
     font-size: 0.875rem;
     font-weight: 500;
     font-family: opensans, sans-serif;
@@ -146,7 +144,7 @@ $background-secondary: #FFFFFF;
     font-weight: 400;
     letter-spacing: 0.055rem;
     transition: background-color 0.3s ease;
-    color: #A8A8A8;
+    color: $silvertext;
     font-family: Opensans, sans-serif;
     margin-bottom: 2rem;
 }
@@ -156,7 +154,7 @@ $background-secondary: #FFFFFF;
     font-weight: 400;
     letter-spacing: 0.055rem;
     transition: background-color 0.3s ease;
-    color: #A8A8A8;
+    color: $silvertext;
     font-family: Opensans, sans-serif;
     margin-bottom: 2rem;
     text-align: center;
@@ -174,7 +172,7 @@ $background-secondary: #FFFFFF;
 }
 
 .title-footer {
-    color: #353434;
+    color: $blacktext;
     font-family: Oswald, sans-serif;
     font-weight: 400;
     font-size: 1.25rem;
@@ -206,11 +204,11 @@ $background-secondary: #FFFFFF;
                 font-weight: 400;
                 font-size: 2.812rem;
                 line-height: 3.438rem;
-                color: #353434;
+                color: $blacktext;
                 margin-bottom: 0.625rem;
 
                 .baner-title-color {
-                    color: #FF5C00;
+                    color: $orangecolor;
                 }
             }
 
@@ -221,8 +219,8 @@ $background-secondary: #FFFFFF;
                 .dis-now-button {
                     display: inline-block;
                     padding: 0.625rem 1.25rem;
-                    background-color: #544CAC;
-                    color: #FFFFFF;
+                    background-color: $battoncolor;
+                    color: $background-secondary;
                     border-radius: 0.625rem;
                     font-family: opensans, sans-serif;
                     font-size: 1rem;
@@ -239,7 +237,7 @@ $background-secondary: #FFFFFF;
                     width: 11rem;
                     height: 2.9rem;
                     border-radius: 2rem;
-                    color: #000000;
+                    color: $blacktext;
                     gap: 1rem;
                     font-family: opensans, sans-serif;
                     font-size: 1rem;
@@ -250,7 +248,7 @@ $background-secondary: #FFFFFF;
                         width: 2.99rem;
                         height: 2.99rem;
                         border-radius: 50%;
-                        background-color: #ffffff;
+                        background-color: $background-secondary;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -294,7 +292,7 @@ $background-secondary: #FFFFFF;
                     font-weight: 400;
                     font-size: 0.8rem;
                     line-height: 3.125rem;
-                    color: #FF5C00;
+                    color: $orangecolor;
                     margin-bottom: 0.05rem;
                 }
 
@@ -305,12 +303,12 @@ $background-secondary: #FFFFFF;
                     font-family: sans-serif;
 
                     .collapsible-block {
-                        background-color: #fff;
+                        background-color: $background-secondary;
                         border-radius: 8px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
                         /* Легка тінь */
                         margin-bottom: 15px;
-                        color: #333;
+                        color: $blacktext;
                         overflow: hidden;
                         list-style: none;
 
@@ -322,7 +320,7 @@ $background-secondary: #FFFFFF;
                             font-family: Opensans, sans-serif;
                             font-weight: bold;
                             font-size: 1.1em;
-                            background-color: #F5F7FF;
+                            background-color: $background-basic;
                             position: relative;
                             margin-top: 1.5rem;
 
@@ -369,7 +367,7 @@ $background-secondary: #FFFFFF;
                                 width: 30px;
                                 height: 30px;
                                 border-radius: 25%;
-                                color: #FF5C00;
+                                color: $orangecolor;
                                 background-color: #FFDECC;
                                 font-size: 0.9em;
                                 margin-right: 15px;
@@ -395,8 +393,8 @@ $background-secondary: #FFFFFF;
 
                         .collapsible-content {
                             padding: 10px 20px 15px;
-                            background-color: #F5F7FF;
-                            color: #666;
+                            background-color: $background-basic;
+                            color: $silvertext;
                             line-height: 1.6;
                         }
                     }
@@ -412,7 +410,6 @@ $background-secondary: #FFFFFF;
                 .video-frame {
                     position: relative;
                     width: 100%;
-                    // max-width: 500px;
                     border-radius: 1rem;
                     overflow: hidden;
 
@@ -421,18 +418,6 @@ $background-secondary: #FFFFFF;
                         height: 27rem;
                         border-radius: 1rem;
                         border: none;
-                    }
-
-                    .play-overlay {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 48px;
-                        background: rgba(255, 255, 255, 0.7);
-                        padding: 10px 15px;
-                        border-radius: 50%;
-                        pointer-events: none;
                     }
                 }
             }
@@ -460,7 +445,7 @@ $background-secondary: #FFFFFF;
             margin-bottom: 2rem;
 
             .card {
-                background-color: #fff;
+                background-color: $background-secondary;
                 margin: 1rem;
                 padding: 1.5rem;
                 gap: 1rem;
@@ -503,7 +488,7 @@ $background-secondary: #FFFFFF;
             margin-bottom: 1.5rem;
 
             .fj-card {
-                background-color: #fff;
+                background-color: $background-secondary;
                 margin: 1rem;
                 padding: 1.5rem;
                 border-radius: 1.5rem;
@@ -531,7 +516,7 @@ $background-secondary: #FFFFFF;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 0.2rem solid #d4773e;
+                    border: 0.2rem solid $orangecolor;
                     margin-top: 1.5rem;
                     box-shadow: 0 0 0.312rem rgba(0, 0, 0, 0.5);
                 }
@@ -541,12 +526,12 @@ $background-secondary: #FFFFFF;
                     font-weight: 400;
                     letter-spacing: 0.03rem;
                     transition: background-color 0.3s ease;
-                    color: #323232;
+                    color: $blacktext;
                     font-family: Opensans, sans-serif;
                 }
 
                 .team {
-                    color: #4238AF;
+                    color: $battoncolor;
                     font-size: 0.9rem;
                     margin-bottom: 2.5rem;
                 }
@@ -563,8 +548,8 @@ $background-secondary: #FFFFFF;
                     }
 
                     .fj-card-button {
-                        background-color: #544CAC;
-                        color: #FFFFFF;
+                        background-color: $battoncolor;
+                        color: $background-secondary;
                         border-radius: 2rem;
                         width: 7rem;
                         height: 2.7rem;
@@ -591,7 +576,7 @@ $background-secondary: #FFFFFF;
                     }
 
                     .praice-time {
-                        color: #898989;
+                        color: $silvertext;
                         font-weight: 0.875rem;
                     }
                 }
@@ -611,7 +596,7 @@ $background-secondary: #FFFFFF;
                     }
 
                     .viev-loco {
-                        color: #898989;
+                        color: $silvertext;
                         font-weight: 0.875rem;
                     }
                 }
@@ -660,14 +645,14 @@ $background-secondary: #FFFFFF;
 
             .arrow-right:hover {
                 box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
-                fill: #EF6010;
+                fill: $orangecolor;
             }
 
             .fj-viewmore-button {
                 box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
                 margin-left: 2rem;
-                background-color: #544CAC;
-                color: #FFFFFF;
+                background-color: $battoncolor;
+                color: $background-secondary;
                 border-radius: 2rem;
                 width: 8rem;
                 height: 2.7rem;
@@ -716,7 +701,7 @@ $background-secondary: #FFFFFF;
                 font-weight: 600;
                 font-size: 1.25rem;
                 letter-spacing: 0.05rem;
-                color: #323232;
+                color: $blacktext;
             }
 
             .star-rating-block {
@@ -747,7 +732,7 @@ $background-secondary: #FFFFFF;
 
                     &.empty {
                         fill: transparent;
-                        stroke: #CCCCCC;
+                        stroke: $silvertext;
                         stroke-width: 1.5;
                     }
                 }
@@ -755,7 +740,7 @@ $background-secondary: #FFFFFF;
                 .rating-value {
                     font-size: 1.5em;
                     font-weight: bold;
-                    color: #333;
+                    color: $blacktext;
                     margin-left: 0.312rem;
                 }
             }
@@ -877,7 +862,7 @@ $background-secondary: #FFFFFF;
                 .count {
                     font-family: 'Oswald';
                     font-size: 2.5rem;
-                    color: #584EC6;
+                    color: $battoncolor;
                     letter-spacing: 0.01rem;
                     font-weight: 400;
                 }
@@ -887,7 +872,7 @@ $background-secondary: #FFFFFF;
                     font-weight: 400;
                     font-size: 1rem;
                     letter-spacing: 0.05rem;
-                    color: white;
+                    color: $background-secondary;
                 }
             }
         }
@@ -913,7 +898,7 @@ $background-secondary: #FFFFFF;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                background-color: #fff;
+                background-color: $background-secondary;
                 border-radius: 2rem;
                 box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
                 transition: box-shadow 0.3s ease;
@@ -928,7 +913,7 @@ $background-secondary: #FFFFFF;
                     font-weight: 600;
                     font-size: 1.25rem;
                     letter-spacing: 0.05rem;
-                    color: #4238AF;
+                    color: $battoncolor;
                 }
 
                 .price {
@@ -936,7 +921,7 @@ $background-secondary: #FFFFFF;
                     font-weight: 400;
                     font-size: 2.8rem;
                     letter-spacing: 0.16rem;
-                    color: #353434;
+                    color: $blacktext;
 
                 }
 
@@ -963,7 +948,7 @@ $background-secondary: #FFFFFF;
                     font-size: 1rem;
                     letter-spacing: 0.05rem;
                     background-color: #BDBBD9;
-                    color: #FFFFFF;
+                    color: $background-secondary;
                     border-radius: 2rem;
                     display: flex;
                     align-items: center;
@@ -971,13 +956,13 @@ $background-secondary: #FFFFFF;
                     padding: 0.7rem 2rem;
 
                     &.central {
-                        background-color: #544CAC;
+                        background-color: $battoncolor;
                     }
                 }
 
                 &:hover {
                     .pricing-card-button {
-                        background-color: #544CAC;
+                        background-color: $battoncolor;
                     }
                 }
             }
@@ -989,7 +974,7 @@ $background-secondary: #FFFFFF;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: $background-secondary;
     flex-shrink: 0;
 
     .footer-nav {
@@ -997,7 +982,7 @@ $background-secondary: #FFFFFF;
         justify-content: space-between;
         padding: 2.2rem;
         border-radius: 1.5rem 1.5rem 0 0;
-        background-color: #DBE2FF;
+        background-color: $background-basic;
 
         .nav-column {
             display: flex;
@@ -1008,42 +993,35 @@ $background-secondary: #FFFFFF;
                 font-weight: 400;
                 font-size: 1rem;
                 letter-spacing: 0.05rem;
-                color: #717171;
+                color: $silvertext;
                 margin-bottom: 0.5rem;
                 &:hover {
                     font-weight: 600;
-                    color: #000000;
+                    color: $blacktext;
                 }
             }
         }
     }
-
     .bottom-footer {
         padding: 0.5rem 2.2rem;
-        background-color: #DBE2FF;
-
+        background-color: $background-basic;
         .bottom-footer-border {
-            border-top: 0.2rem solid #625BAE;
+            border-top: 0.2rem solid $battoncolor;
             padding-top: 0.5rem;
             display: flex;
             justify-content: space-between;
-
-            // justify-content: space-between;
             .bottom-footer-nav {
                 display: flex;
                 align-items: center;
-
                 .bottom-footer-list {
                     display: flex;
                     gap: 2.5rem;
                     .item:hover {
                         font-weight: 600;
-                        color: #000000;
+                        color: $blacktext;
                     }
-                    
                 }
             }
-
             .bottom-footer-sociallink {
                 width: 15rem;
                 justify-content: space-between;
