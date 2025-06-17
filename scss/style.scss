@@ -1,5 +1,6 @@
 @import 'nullstyle.scss';
 @import 'variables';
+@import 'extend';
 
 [class*="__container"] {
     max-width: $maxwidth;
@@ -20,7 +21,7 @@
     background-color: $background-basic;
     padding: 1.5rem;
     color: $blacktext;
-    font-size: 0.875rem;
+    font-size: $font-size-s;
     font-weight: 500;
     font-family: opensans, sans-serif;
     letter-spacing: 0.1rem;
@@ -92,25 +93,10 @@
     }
 }
 .text {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.055rem;
-    transition: background-color 0.3s ease;
-    color: $silvertext;
-    font-family: Opensans, sans-serif;
-    margin-bottom: 2rem;
+    @extend %font-silver;
 }
 .text-center {
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.055rem;
-    transition: background-color 0.3s ease;
-    color: $silvertext;
-    font-family: Opensans, sans-serif;
-    margin-bottom: 2rem;
-    text-align: center;
-    margin-top: 1rem;
-    width: 55%;
+    @extend %font-silver-center;
 }
 .title {
     color: #353434;
@@ -626,7 +612,7 @@
             .whatour-textjustify {
                 font-size: 0.875rem;
                 line-height: 1.6;
-                color: #383838;
+                color: $silvertext;
                 text-align: justify;
                 margin-bottom: 2rem;
             }

@@ -1,0 +1,20 @@
+
+%font-silver {
+    font-size: $font-size-s;
+    font-weight: 400;
+    letter-spacing: $letter-spacing-s;
+    transition: background-color 0.3s ease;
+    color: $silvertext;
+    font-family: Opensans, sans-serif;
+}
+
+%font-silver-center {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.055rem;
+    transition: background-color 0.3s ease;
+    color: $silvertext;
+    font-family: Opensans, sans-serif;
+    text-align: center;
+    width: 55%;
+}
